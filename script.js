@@ -11,8 +11,10 @@ const getSecondHandItems = async () => {
 
 const buildItemCards = (items) => {
   items.forEach((i) => {
-    const itemCard = document.createElement("div");
+    const itemCard = document.createElement("a");
+    itemCard.href = `./secondHandItem/index.html?id=${i.id}`;
     itemCard.setAttribute("class", "itemCard");
+
     const name = document.createElement("h3");
     const img = document.createElement("img");
     const price = document.createElement("h3");
@@ -28,6 +30,9 @@ const buildItemCards = (items) => {
 
 const startApp = async () => {
   const items = await getSecondHandItems();
+
+  items.sort((a, b) => a.price - b.price);
+
   buildItemCards(items);
 };
 

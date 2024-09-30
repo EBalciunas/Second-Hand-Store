@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/* form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 1rem;
+  margin: auto;
+}
+
+form input {
+  padding: 0.5rem;
+}
+
+form button {
+  padding: 0.5rem;
+}
+
+.success {
+  color: rgb(52, 134, 52);
+  text-align: center;
+} */
