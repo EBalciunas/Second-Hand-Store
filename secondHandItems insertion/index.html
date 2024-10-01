@@ -7,19 +7,49 @@
     <title>SecondHandStore</title>
   </head>
   <body>
-    <h1>Second hand store insertion form</h1>
-    <!-- <form action="Submit">
-      <input type="text" id="name" placeholder="name" />
-      <input type="text" id="price" placeholder="price" />
-      <input type="text" id="pictureUrl" placeholder="pictureUrl" />
-      <input
-        type="text"
-        id="productDescription"
-        placeholder="productDescription"
-      />
-      <input type="text" id="locations" placeholder="locations" />
-      <button id="add-btn">Add</button>
-    </form> -->
+    <div class="container">
+      <h1>Second Hand Store Insertion Form</h1>
+      <form action="Submit" class="insertion-form">
+        <input
+          type="text"
+          id="name"
+          class="form-input"
+          placeholder="Item name"
+          required
+        />
+        <input
+          type="text"
+          id="price"
+          class="form-input"
+          placeholder="Price"
+          required
+        />
+        <input
+          type="text"
+          id="pictureUrl"
+          class="form-input"
+          placeholder="Picture URL"
+          required
+        />
+        <textarea
+          id="productDescription"
+          class="form-input"
+          placeholder="Product description"
+          required
+        ></textarea>
+        <input
+          type="text"
+          id="locations"
+          class="form-input"
+          placeholder="Location"
+          required
+        />
+        <button type="submit" id="add-btn" class="submit-btn">Add</button>
+        <button type="button" id="back-btn" class="back-to-catalog-btn">
+          Back to Catalog
+        </button>
+      </form>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -22,13 +22,13 @@ const buildItemCards = (items) => {
     name.innerText = i.name;
     img.src = i.pictureUrl;
     img.setAttribute("class", "card-img");
-    price.innerText = i.price;
+    price.innerText = ` ${i.price}€`;
     itemCard.append(name, img, price);
     cardItemWrapper.append(itemCard);
   });
 };
 
-const startApp = async () => {
+const initApp = async () => {
   const items = await getSecondHandItems();
 
   items.sort((a, b) => a.price - b.price);
@@ -36,4 +36,4 @@ const startApp = async () => {
   buildItemCards(items);
 };
 
-startApp();
+initApp();

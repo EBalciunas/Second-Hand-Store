@@ -5,6 +5,7 @@ const price = document.getElementById("price");
 const itemLocation = document.getElementById("item-location");
 const deleteBtn = document.getElementById("delete-btn");
 const warningMessage = document.getElementById("warning-message");
+const backBtn = document.getElementById("back-btn");
 
 const url = new URL(window.location.href);
 const id = url.searchParams.get("id");
@@ -34,7 +35,7 @@ const screenBuild = (data) => {
   name.innerText = data.name;
   itemImg.src = data.pictureUrl;
   productDescription.innerText = `Product description: ${data.productDescription}`;
-  price.innerText = `Product price: ${data.price}`;
+  price.innerText = `Product price: ${data.price}€`;
   itemLocation.innerText = `Location: ${data.location}`;
 };
 
@@ -53,4 +54,10 @@ deleteBtn.addEventListener("click", async () => {
   setTimeout(() => {
     window.location.replace("../index.html");
   }, 2000);
+});
+
+backBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    window.location.replace("../index.html");
+  }, 1000);
 });
