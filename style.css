@@ -28,6 +28,14 @@ header h1 {
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.store-icon {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
 }
 
 header nav ul {
@@ -45,19 +53,19 @@ header nav ul li a {
   font-size: 1rem;
 }
 
-.hero {
+.add-item {
   text-align: center;
   padding: 2rem;
   background: linear-gradient(135deg, #6c757d, #343a40);
   color: white;
 }
 
-.hero h2 {
+.add-item h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.btn-add {
+.add-btn {
   background-color: #ffc107;
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -65,10 +73,10 @@ header nav ul li a {
   font-size: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
+  transition: 0.3s;
 }
 
-.btn-add:hover {
+.add-btn:hover {
   background-color: #e0a800;
 }
 
@@ -140,4 +148,57 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .store-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    margin: 0 10px;
+  }
+
+  .add-item h2 {
+    font-size: 2rem;
+  }
+
+  .add-btn {
+    font-size: 0.9rem;
+  }
+
+  .special-deal h2 {
+    font-size: 1.5rem;
+  }
+
+  .special-deal p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .itemCard {
+    padding: 0.5rem;
+  }
 }
